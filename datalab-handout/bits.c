@@ -143,7 +143,8 @@ NOTES:
  *   Rating: 1
  */
 int bitXor(int x, int y) {
-  return 2;
+  // 疯狂嵌套
+  return ~((~(~x&y))&(~(~y&x)));
 }
 /* 
  * tmin - return minimum two's complement integer 
@@ -152,9 +153,11 @@ int bitXor(int x, int y) {
  *   Rating: 1
  */
 int tmin(void) {
-
-  return 2;
-
+  // 补码最小值
+  // range
+  // 100000000000 to 111111111111
+  // 100000000000
+  return 1<<31;
 }
 //2
 /*
@@ -165,6 +168,10 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
+  // 1 if x = 11111111111 else 0
+  // 1 if x = -1 else 0
+  // 1 if x = 100000000001 else 0
+  2147483647
   return 2;
 }
 /* 
